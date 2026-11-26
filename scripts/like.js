@@ -13,16 +13,20 @@ const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
 
 iconButtonArray.forEach((iconButton, index) => {
+  iconButton.setAttribute('aria-pressed', 'false');
   iconButton.onclick = () =>
     toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
 });
 
 likeButtonArray.forEach((button, index) => {
+  button.setAttribute('aria-pressed', 'false');
   button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
 });
 
 function toggleIsLiked(heart, button) {
-  heart.classList.toggle('is-liked');
+  const isLiked = heart.classList.toggle('is-liked');
+  heart.closest('button').setAttribute('aria-pressed', String(isLiked));
+  button.setAttribute('aria-pressed', String(isLiked));
   setButtonText(heart, button);
 }
 

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="save" viewBox="0 0 39 39">
+    <path fill="currentColor" fill-rule="evenodd" d="M0 0h33v3h3v3h3v33H0ZM3 3v33h3V21h27v15h3V6h-3V3h-3v12H6V3ZM9 3h12v9H9ZM24 3h3v9h-3ZM9 24h21v12H9Z"/>
+  </symbol>
+</svg>
